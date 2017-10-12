@@ -3,11 +3,11 @@ import hbs from '@glimmer/inline-precompile';
 
 const { module, test } = QUnit;
 
-module('Component: my-app', function(hooks) {
+module('Component: Goo', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
-    await this.render(hbs`<my-app />`);
-    assert.equal(this.containerElement.textContent, 'Welcome to Glimmer!\n');
+    await this.render(hbs`<Goo />`);
+    assert.ok(this.containerElement.querySelector('div'));
   });
 });
